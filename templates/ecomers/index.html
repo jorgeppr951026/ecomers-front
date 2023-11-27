@@ -1,0 +1,39 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+</head>
+
+<body>
+    <h1>Make AJAX Request to API</h1>
+    <p>{{values}}</p>
+    <button onclick="makeRequest()">Make Request</button>
+    <div id="response-container"></div>
+
+    <script>
+        async function makeRequest() {
+            try {
+                let response = await fetch('http://127.0.0.1:8000');
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+               
+                let data = await response.json();
+               
+                document.getElementById('response-container').innerHTML = '<p>' + data.index + '</p>';
+
+                // Puedes realizar más acciones con los datos aquí
+
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+
+</html>
