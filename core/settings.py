@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=gt+ktn^rma$hkqdkx$t&1^&7xy%cld&clch21uova77a&)3e*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ecomers-front.onrender.com"]
 
 CORS_ALLOWED = ["*"]
 # Application definition
