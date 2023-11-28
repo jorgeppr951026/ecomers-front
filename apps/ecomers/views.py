@@ -14,6 +14,6 @@ class ExampleApiView(View):
 from django.shortcuts import render
 
 def index(request):
-    data = requests.get("http://127.0.0.1:8000").json()
+    #data = requests.get("https://ecomers-lg2f.onrender.com").json()
     
-    return render(request, 'ecomers/index.html', context={"values":data})
+    return render(request, 'ecomers/index.html',)
